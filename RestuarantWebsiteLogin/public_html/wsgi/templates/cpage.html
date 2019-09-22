@@ -1,0 +1,55 @@
+$def with (customers,menuitem)
+<html>
+<head>
+<title> Customer Page</title>
+
+
+</head>
+<body>
+<ul>
+$for customer in customers:
+	<li>Welcome, $customer.cusname </li>
+	<li>Your customer id : $customer.cusid</li>
+	<li>Your Address: $customer.address</li>
+	<li> Your favorite food item number: $customer.menuitemid</li>
+</ul>
+
+<p> <h3>Instructions:</h3> Remember your customer id for placing orders in future</p>
+<h3> Menu</h3>
+<form action = "cpage" method = "POST">
+<table id = "cpage">
+	<tr> <td> <input type = "hidden" name = "cusid" value = "$customer.cusid"></td></tr>
+	<tr>  <td> Instructions:</td><td>  <input type = "text" name = "instructions" maxlength = "200"></td></tr>
+	<tr>  
+		 <td> Payment Type: </td>
+		 <td> <select name = "paymenttype">
+			<option> CreditCard</option>
+			<option> Cash</option>
+		 
+		 </select>  
+		 </td>
+	</tr>
+	<tr><th> Item ID</th> <th> Name</th> <th> Price</th> <th> Type</th></tr>
+	
+$for item in menuitem:
+	
+	<tr>
+	<td> <input type = "checkbox" name = "menuitemid" value = "$item.menuitemid"> $item.menuitemid</td>
+	<td> $item.miname</td>
+	<td> $item.price </td>
+	<td> $item.mitemtype</td>
+	<td>  <input type = "hidden" name = "price" value = "$item.price"> </td>
+	</tr>
+
+
+
+</table>
+<td><Input type = "Submit" value = "Place your order"></td>
+
+
+
+
+</form>
+</body>
+
+</html>

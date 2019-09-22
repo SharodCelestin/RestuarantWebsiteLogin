@@ -1,0 +1,41 @@
+$def with (menuitem)
+<html>
+	<head>
+		<title>Customer Page</title>
+	</head>
+	<body>
+		<h1> Customer Information Form</h1>
+		<form action="cregister" method = "POST">
+		<table id = "cregister">
+		<tr>
+		<td> Name:</td>
+		<td><Input type = "text" name="cusname"></td>
+		</tr>
+		<tr>
+		<td> Address:</td>
+		<td> <Input type = "text" name = "address"> </td>
+		</tr>
+		<tr>
+		<td> Phone Number (don't include dashes):</td>
+		<td> <Input type = "text" name = "cusphonenum"></td>
+		</tr>
+		<tr>
+		<td>  Favorite Menu Item:</td>
+		<td>
+		<select name = "miname">
+		$for item in menuitem:
+			<option> $item.miname</option>
+		</select>
+		
+		</td>
+		</tr>
+		
+		
+		
+		</table>
+	
+		<td> <Input type = "Submit" value = "Submit"</td>
+		</form>
+		Already have an account? <a href= "clogin">Login here</a>
+	</body>
+</html>

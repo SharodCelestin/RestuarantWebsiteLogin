@@ -1,0 +1,19 @@
+$def with (employees)
+<html>
+<head>
+<title> Employees </title>
+</head>
+<body>
+<ul>
+$for employee in employees:
+	<li> $employee.ename  </li>
+
+</ul>
+<a href = "eregister"> New Employee?Register Here</a>
+<br>
+<a href = "cregister"> New Customer? Click Here</a>
+<br>
+<a href = "elogin"> Employee Login</a>
+<br>
+</body>
+</html>

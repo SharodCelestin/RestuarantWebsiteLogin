@@ -1,0 +1,28 @@
+$def with (menuitem,customers)
+<html>
+<head>
+<title> Place an order</title>
+</head>
+<body>
+<form action = "menu" method = "POST">
+<table id = "menu">
+$for item in menuitem:
+	<tr>
+	<td> <input type = "checkbox" name = "menuitemid" value = "$item.menuitemid"></td>
+	<td> $item.miname</td>
+	<td> $item.price </td>
+	<td> $item.mitemtype</td>
+	</tr>
+
+
+
+</table>
+
+
+
+
+
+</form>
+
+</body>
+</html>

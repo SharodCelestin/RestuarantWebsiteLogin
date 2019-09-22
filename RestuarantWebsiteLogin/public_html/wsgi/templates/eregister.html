@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>Employee Registration</title>
+	</head>
+	<body>
+		<h1> Employee Registration Page</h1>
+		<form action="eregister" method = "POST">
+		<table id = "eregister">
+		<tr>
+		<td> Create Password:</td>
+		<td> <Input type = "text" name = "epasscode"> </td>
+		</tr>
+		<tr>
+		<td> Name:</td>
+		<td><Input type = "text" name="ename"></td>
+		</tr>
+		<tr>
+		<td> Position:</td>
+		<td>
+		<select name = "position">
+		<option> Chef</option>
+		<option> Cashier</option>
+		</select>
+		
+		
+		</td>
+		
+		</tr>
+		<tr>
+		<td> Address:</td>
+		<td> <Input type = "text" name = "address"> </td>
+		</tr>
+		<td> Phone Number (don't include dashes):</td>
+		<td> <Input type = "text" name = "ephonenum"</td>
+		
+		
+		</table>
+		<td> <Input type = "Submit" value = "Register"</td>
+		
+		</form>
+		Already have an account? <a href = "elogin"> Log in</a>
+		<p>
+		<h3>Instructions :</h3> 
+		Name:If your name is more than 15 characters, then type only the first fifteen letter
+		<br>
+		Address: Just type the street address. Don't need to type city,state and zip code.
+		<br>
+		Phone number: Must be exactly 10 characters
+		<br>
+		
+		After clicking register, you will be logged in automatically. You will see your employee id on the log in page. 
+		<br>
+		You will be using your id in the future for login purposes.
+		</p>
+	</body>
+</html>
